@@ -1,6 +1,12 @@
 # Blog MERN
 
-This is the local optimized version of blog-mern. A MERN blog app from an assignment project from [the Odin Project](https://www.theodinproject.com/lessons/nodejs-blog-api). It is part of the full stack API section of their course.
+A blog website where the admin can create blogs with markdown, edit, delete and publish them. The user can view the blogs and comment on them
+
+> Note: This is the local optimized version of blog-mern. A MERN blog app from an assignment project from [the Odin Project](https://www.theodinproject.com/lessons/nodejs-blog-api). It is part of the full stack API section of their course.
+
+## Live Demo
+
+[Blog API](https://blog-mern-client.onrender.com/)
 
 ## Test the app locally on your machine
 

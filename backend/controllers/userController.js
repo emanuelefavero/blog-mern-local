@@ -50,10 +50,11 @@ exports.register = [
               if (err) {
                 return next(err)
               }
-              // Registration successful.
-              // req.user = user
 
-              res.status(200).json({ message: 'Registration successful!' })
+              req.user = user
+
+              // Successful - redirect to new user record.
+              res.status(200).json({ message: 'User created successfully!' })
             })
           })
         }
@@ -108,10 +109,9 @@ exports.login = [
                     return next(err)
                   }
 
-                  // pass the user to the next middleware
-                  // req.user = foundUser
+                  req.user = foundUser
 
-                  // Authentication successful.
+                  // Successful - redirect to new user record.
                   res.status(200).json({ message: 'Login successful!' })
                 })
               } else {
@@ -140,9 +140,13 @@ exports.logout = (req, res, next) => {
   })
 }
 
-// get user API
+// get user if logged in
 exports.getUser = (req, res, next) => {
-  res.send(req.user)
+  if (req.isAuthenticated()) {
+    res.status(200).json({ user: req.user })
+  } else {
+    res.status(401).json({ message: 'Unauthorized' })
+  }
 }
 
 // get user by id

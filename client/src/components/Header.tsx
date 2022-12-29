@@ -4,10 +4,11 @@ import { useContext, useEffect } from 'react'
 import UserContext from '../context/UserContext'
 
 function Header() {
-  const { user, logout } = useContext(UserContext)
+  const { user, getUser, logout } = useContext(UserContext)
 
   useEffect(() => {
-    // getUser()
+    getUser()
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
