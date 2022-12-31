@@ -6,8 +6,14 @@ A blog website where the admin can create blogs with markdown, edit, delete and 
 
 ## Live Demo
 
+> test user is username: `john`, password: `1234`
+
 [https://blog-mern-client.onrender.com/](https://blog-mern-client.onrender.com/)
 [](https://blog-mern-client.onrender.com/)
+
+#### Screenshot
+
+![screenshot](./screenshot.png)
 
 ## Test the app locally on your machine
 
